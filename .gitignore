@@ -1,0 +1,9 @@
+#temporary
+/images
+
+# dependencies
+/node_modules
+
+# misc
+.sass-cache/
+*.log

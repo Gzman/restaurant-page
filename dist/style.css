@@ -1,0 +1,58 @@
+
+:root {
+    --primary-color: #F2DD9A;
+    --primary-selected: #ddc36d;
+    --secondary-color: white;
+    --accent-color: #B15A81;
+}
+
+html {
+    font-family: Mukta;
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/restaurant-bg-ksenia-chernaya.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+h1 {
+    font-family: Niconne;
+    font-size: 4rem;
+}
+
+#navbar {
+    display: flex;
+    gap: 3rem;
+}
+
+/* #navbar div {
+    max-height: fit-content;
+} */
+
+#navbar div:hover {
+    cursor: pointer;
+    background-color: var(--primary-selected);
+}
+
+#navbar p {
+    font-size: 1.5rem;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.5);
+}

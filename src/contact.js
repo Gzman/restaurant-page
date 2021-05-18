@@ -44,7 +44,6 @@ function createContact() {
     </tr>`;
 
     const hours = document.createElement("div");
-    hours.id = "hours-container";
     hours.append(hoursHeader, hoursTable);
     const contact = document.createElement("div");
     contact.id = "contact";

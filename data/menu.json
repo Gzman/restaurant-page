@@ -2,17 +2,17 @@
     "Suppen": [
         {
             "name": "Tomatensuppe",
-            "content" : "Mit Basilikum-Pesto und Creme frache",
+            "content" : "Mit Basilikum-Pesto und Creme Fraiche",
             "price" : "4,60"
         },
         {
             "name": "Spargelcreme",
-            "content" : "Mit frischen Spargel, Zitronen und Creme frache",
+            "content" : "Mit frischen Spargel, Zitronen und Creme Fraiche",
             "price" : "5,60"
         },
         {
             "name": "Kürbiscreme",
-            "content" : "Mit Kürbiskernen und Creme frache",
+            "content" : "Mit Kürbiskernen und Creme Fraiche",
             "price" : "4,20"
         }
     ],

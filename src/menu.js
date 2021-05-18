@@ -1,28 +1,27 @@
-// Es6 import doesn't support Json import; however Webpack does
 import MenuData from "../data/menu.json"
 
 function createMenu() {
-    const menuContent = document.createElement("div");
-    menuContent.id = "menu-page";
+    const menu = document.createElement("div");
+    menu.id = "menu";
     const categories = Object.keys(MenuData);
     categories.forEach((category) => {
-        const cat = document.createElement("div");
-        cat.classList.add("menu-category");
+        const categoryElement = document.createElement("div");
+        categoryElement.classList.add("menu-category");
         const categoryTitle = document.createElement("p");
         categoryTitle.classList.add("menu-category-title");
         categoryTitle.textContent = category;
-        cat.append(categoryTitle);
+        categoryElement.append(categoryTitle);
         MenuData[category].forEach((entry) => {
             const div = createMenuEntry(entry);
-            cat.append(div);
+            categoryElement.append(div);
         });
-        menuContent.append(cat);
+        menu.append(categoryElement);
     });
-    return menuContent;
+    return menu;
 }
 
 function createMenuEntry(entryData) {
-    const title = document.createElement("p");
+    const title = document.createElement("h3");
     title.classList.add("menu-entry-title");
     title.textContent = entryData?.name;
     const description = document.createElement("p");

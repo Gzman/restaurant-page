@@ -1,0 +1,49 @@
+{
+    "Suppen": [
+        {
+            "name": "Tomatensuppe",
+            "content" : "Mit Basilikum-Pesto und Creme frache",
+            "price" : "4,60"
+        },
+        {
+            "name": "Spargelcreme",
+            "content" : "Mit frischen Spargel, Zitronen und Creme frache",
+            "price" : "5,60"
+        },
+        {
+            "name": "Kürbiscreme",
+            "content" : "Mit Kürbiskernen und Creme frache",
+            "price" : "4,20"
+        }
+    ],
+    "Hauptgänge": [
+        {
+            "name": "Lachsfilet mit Offenkartoffel",
+            "content" : "Frischer Lachs aus Norwegen und Dip",
+            "price" : "19,60"
+        },
+        {
+            "name": "Rumpsteak mit Kroketten",
+            "content" : "Rumpsteak aus Argentinien, mit Kroketten und hausgemachter Kräuterbutter",
+            "price" : "26,60"
+        },
+        {
+            "name": "Bauernröstie",
+            "content": "Mit Speckscheiben, gebratenen Zwiebeln, Tomaten und Spiegelei",
+            "price": "16,70"
+        }
+    ],
+    "Desserts": [
+        {
+            "name": "Sckoko-Mousse",
+            "content" : "Im Glas mit Sahnehäubchen",
+            "price" : "5,60"
+        },
+        {
+            "name": "Apfelkuchen",
+            "content" : "Mit Apfelstücken, Zimt und Kakao",
+            "price" : "5,10"
+        }
+    ]
+  }
+  

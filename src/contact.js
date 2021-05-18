@@ -1,11 +1,11 @@
 
 function createContact() {
     const adress = document.createElement("p");
-    adress.innerHTML = "Muster Restaurant<br>Familie Muster<br>Musterstr. 47<br>4711 Musterstadt";
+    adress.innerHTML = "<b>Muster Restaurant</b><br>Familie Muster<br>Musterstr. 47<br>4711 Musterstadt";
     const tel = document.createElement("p");
-    tel.textContent = "Tel. +49 7744 4711";
+    tel.innerHTML = "Tel. <b>+49 7744 4711</b>";
     const email = document.createElement("p");
-    email.textContent = "info@muster-restaurant.de";
+    email.innerHTML = "<b>info@muster-restaurant.de</b>";
     const hoursHeader = document.createElement("h3");
     hoursHeader.textContent = "Öffnungszeiten";
     const hoursTable = document.createElement("table");

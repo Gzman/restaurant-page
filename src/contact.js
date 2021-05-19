@@ -50,7 +50,7 @@ function createContact() {
     hours.append(hoursHeader, hoursTable);
 
     const contact = document.createElement("div");
-    contact.id = "contact";
+    contact.classList.add("contact");
     contact.append(contactInfo, hours);
     return contact;
 };

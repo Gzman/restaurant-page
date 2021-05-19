@@ -2,7 +2,7 @@ import MenuContent from "../data/menu.json"
 
 function createMenu() {
     const menu = document.createElement("div");
-    menu.id = "menu";
+    menu.classList.add("menu");
     const categories = Object.keys(MenuContent);
     categories.forEach((category) => {
         const categoryElement = createMenuCategory(category);
@@ -11,7 +11,7 @@ function createMenu() {
             const entryElement = createMenuEntry(entry);
             categoryElement.append(entryElement);
         });
-        
+
         menu.append(categoryElement);
     });
     return menu;

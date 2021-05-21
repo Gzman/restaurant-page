@@ -1,19 +1,61 @@
+import HomeContent from "../data/home.json"
+
 function createHome() {
-    const slogan = document.createElement("p");
-    slogan.textContent = "Traditionelle, zeitlose Küche, familiengeführt seit 1956";
-    
-    const lachs = document.createElement("img");
-    lachs.src = "../images/lachs-cottonbro.jpg";
-    const steak = document.createElement("img");
-    steak.src = "../images/steak-geraud-pfeiffer.jpg";
-    const images = document.createElement("div");
-    images.classList.add("images");
-    images.append(lachs, steak);
+    const greeting = document.createElement("h2");
+    greeting.textContent = HomeContent.de.greeting;
+
+    const description = document.createElement("p");
+    description.textContent = HomeContent.de["short-description"];
+
+    const slideShow = createSlideShow();
     
     const home = document.createElement("div");
     home.classList.add("home");
-    home.append(slogan, images);
+    home.append(greeting, description, slideShow);
     return home;
 }
 
-export {createHome};
+function createSlideShow() {
+    const slides = HomeContent.de.images.map((image) => {
+        const slide = document.createElement("img");
+        slide.src = image;
+        slide.classList.add("slide");
+        return slide;
+    });
+
+    const slider = ((slides) => {
+        let currentSlide = 0;
+        const slideCount = slides.length;
+        slides.forEach( (slide, index) => index === 0 ? slide.style.display = "block" : slide.style.display = "none");
+
+        const displaySlide = (index) => {
+            slides[currentSlide].style.display = "none";
+            currentSlide = (((currentSlide + index) % slideCount) + slideCount) % slideCount;
+            slides[currentSlide].style.display = "block";
+        } 
+    
+        const next = () => displaySlide(1);
+        const prev = () => displaySlide(-1);
+        return {
+            next,
+            prev
+        }
+    })(slides);
+
+    const prev = document.createElement("button");
+    prev.innerHTML = "&#10094;";
+    prev.classList.add("prev");
+    prev.addEventListener("click", slider.prev);
+
+    const next = document.createElement("button");
+    next.innerHTML = "&#10095;";
+    next.classList.add("next");
+    next.addEventListener("click", slider.next);
+
+    const slideShow = document.createElement("div");
+    slideShow.classList.add("slide-show");
+    slideShow.append(...slides, prev, next);
+    return slideShow;
+}
+
+export { createHome };

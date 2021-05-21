@@ -1,4 +1,4 @@
-import WebsiteContent from "../dist/data/website.json"
+import WebsiteContent from "./data/website.json"
 import { createHome } from "./home"
 import { createMenu } from "./menu"
 import { createContact } from "./contact"

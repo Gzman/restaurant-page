@@ -1,0 +1,10 @@
+{
+  "de": {
+    "greeting": "Herzlich Willkommen",
+    "short-description": "Wir bieten traditionelle, zeitlose Küche. Familiengeführt seit 1956."
+  },
+  "en": {
+    "greeting": "Welcome",
+    "short-description": "We offer traditional, timeless plain Cooking. Family managed since 1956"
+  }
+}

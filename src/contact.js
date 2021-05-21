@@ -1,4 +1,4 @@
-import ContactContent from "../dist/data/contact.json"
+import ContactContent from "./data/contact.json"
 
 function createContact() {
     const adress = document.createElement("p");

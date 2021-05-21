@@ -1,4 +1,4 @@
-import MenuContent from "../dist/data/menu.json"
+import MenuContent from "./data/menu.json"
 
 function createMenu() {
     const menu = document.createElement("div");

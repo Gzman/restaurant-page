@@ -1,4 +1,10 @@
-import HomeContent from "../dist/data/home.json"
+import HomeContent from "./data/home.json"
+
+const imageURLs = (function importSlideShowImages() {
+    const requireContext = require.context("./images/slideshow", false, /^\.\/.*\.jpe?g$/);
+    return requireContext.keys().map(requireContext);
+})();
+
 
 function createHome() {
     const greeting = document.createElement("h2");
@@ -16,9 +22,9 @@ function createHome() {
 }
 
 function createSlideShow() {
-    const slides = HomeContent.de.images.map((image) => {
+    const slides = imageURLs.map((url) => {
         const slide = document.createElement("img");
-        slide.src = image;
+        slide.src = url;
         slide.classList.add("slide");
         return slide;
     });

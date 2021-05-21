@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  background-image: url(../images/background-kristina-paukshtite.jpg);
+  background-image: url(./images/background-kristina-paukshtite.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;

@@ -1,10 +1,9 @@
 import HomeContent from "./data/home.json"
 
 const imageURLs = (function importSlideShowImages() {
-    const requireContext = require.context("./images/slideshow", false, /^\.\/.*\.jpe?g$/);
+    const requireContext = require.context("./slideshow", false, /^\.\/.*\.jpe?g$/);
     return requireContext.keys().map(requireContext);
 })();
-
 
 function createHome() {
     const greeting = document.createElement("h2");

@@ -4,9 +4,9 @@
     "short-description": "Wir bieten traditionelle, zeitlose Küche. Familiengeführt seit 1956.",
 
     "images": [
-        "../dist/images/lachs-cooked-sebastian-coman-photography-3655916.jpg",
-        "../dist/images/burger-sebastian-coman-photography-3504876.jpg",
-        "../dist/images/braten-sebastian-coman-photography-3791089.jpg"
+        "./images/lachs-cooked-sebastian-coman-photography-3655916.jpg",
+        "./images/burger-sebastian-coman-photography-3504876.jpg",
+        "./images/braten-sebastian-coman-photography-3791089.jpg"
     ]
   },
   "en": {

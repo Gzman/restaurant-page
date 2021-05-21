@@ -1,4 +1,4 @@
-import HomeContent from "../data/home.json"
+import HomeContent from "../dist/data/home.json"
 
 function createHome() {
     const greeting = document.createElement("h2");

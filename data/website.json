@@ -1,0 +1,22 @@
+{
+  "de": {
+    "Logo": "Muster Restaurant",
+    "Home": "Home",
+    "Menu": "Menü",
+    "Contact": "Kontakt",
+    "footer": {
+        "link": "https://www.github.com/Gzman/restaurant-page",
+        "linkText": "Crafted by Gzman"
+    }
+  },
+  "en": {
+    "Logo": "Muster Restaurant",
+    "Home": "Home",
+    "Menu": "Menu",
+    "Contact": "Contact",
+    "footer": {
+        "link": "https://www.github.com/Gzman/restaurant-page",
+        "linkText": "Crafted by Gzman"
+    }
+  }
+}

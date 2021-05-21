@@ -3,16 +3,17 @@ import MenuContent from "../data/menu.json"
 function createMenu() {
     const menu = document.createElement("div");
     menu.classList.add("menu");
-    const categories = Object.keys(MenuContent);
+    
+    const categories = Object.keys(MenuContent.de);
     categories.forEach((category) => {
-        const categoryElement = createMenuCategory(category);
+        const menuCategory = createMenuCategory(category);
 
-        MenuContent[category].forEach((entry) => {
-            const entryElement = createMenuEntry(entry);
-            categoryElement.append(entryElement);
+        MenuContent.de[category].forEach((entry) => {
+            const menuEntry = createMenuEntry(entry);
+            menuCategory.append(menuEntry);
         });
 
-        menu.append(categoryElement);
+        menu.append(menuCategory);
     });
     return menu;
 }

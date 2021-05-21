@@ -1,0 +1,22 @@
+{
+  "de": {
+    "greeting": "Herzlich Willkommen",
+    "short-description": "Wir bieten traditionelle, zeitlose Küche. Familiengeführt seit 1956.",
+
+    "images": [
+        "../images/lachs-cooked-sebastian-coman-photography-3655916.jpg",
+        "../images/burger-sebastian-coman-photography-3504876.jpg",
+        "../images/braten-sebastian-coman-photography-3791089.jpg"
+    ]
+  },
+  "en": {
+    "greeting": "Welcome",
+    "short-description": "We offer traditional, timeless plain Cooking. Family managed since 1956",
+
+    "images": [
+        "../images/lachs-cooked-sebastian-coman-photography-3655916.jpg",
+        "../images/burger-sebastian-coman-photography-3504876.jpg",
+        "../images/braten-sebastian-coman-photography-3791089.jpg"
+    ]
+  }
+}

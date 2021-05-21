@@ -1,52 +1,58 @@
+import ContactContent from "../data/contact.json"
 
 function createContact() {
     const adress = document.createElement("p");
-    adress.innerHTML = "Muster Restaurant</b><br>Familie Muster<br>Musterstr. 47<br>4711 Musterstadt";
+    adress.innerHTML = ContactContent.de.adress;
+
     const tel = document.createElement("p");
-    tel.innerHTML = "Tel. <b>+49 7744 4711</b>";
+    tel.innerHTML = ContactContent.de.tel;
+
     const email = document.createElement("p");
-    email.innerHTML = "<b>info@muster-restaurant.de</b>";
+    email.innerHTML = ContactContent.de.email;
+
     const contactInfo = document.createElement("div");
     contactInfo.classList.add("contact-info");
     contactInfo.append(adress, tel, email);
-    
+
+    const hoursContent = ContactContent.de.hours;
     const hoursHeader = document.createElement("h3");
-    hoursHeader.textContent = "Öffnungszeiten";
+    hoursHeader.textContent = hoursContent.title;
     const hoursTable = document.createElement("table");
     hoursTable.innerHTML =`
     <tr>
-        <td>MO</td>
-        <td>11:30&ensp;-&ensp;14:30</td>
+        <td>${hoursContent.Monday.acronym}</td>
+        <td>${hoursContent.Monday.hours[0]}</td>
     </tr>
     <tr>
         <td></t>
-        <td>17:30&ensp;-&ensp;22:30</td>
+        <td>${hoursContent.Monday.hours[1]}</td>
     </tr>
     <tr>
-        <td>DI</td>
-        <td>Ruhetag</td>
+        <td>${hoursContent.Tuesday.acronym}</td>
+        <td>${hoursContent.Tuesday.hours[0]}</td>
     </tr>
     <tr>
-        <td>MI</td>
-        <td>11:30&ensp;-&ensp;14:30</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>18:30&ensp;-&ensp;22:30</td>
-    </tr>
-    <tr>
-        <td>FR</td>
-        <td>18:30&ensp;-&ensp;22.30</td>
-    </tr>
-    <tr>
-        <td>SA + SO</td>
-        <td>11:30&ensp;-&ensp;14:30</td>
+        <td>${hoursContent.Wednesday.acronym}</td>
+        <td>${hoursContent.Wednesday.hours[0]}</td>
     </tr>
     <tr>
         <td></td>
-        <td>17:30&ensp;-&ensp;22:30</td>
+        <td>${hoursContent.Wednesday.hours[1]}</td>
+    </tr>
+    <tr>
+        <td>${hoursContent.Friday.acronym}</td>
+        <td>${hoursContent.Friday.hours[0]}</td>
+    </tr>
+    <tr>
+        <td>${hoursContent.Weekend.acronym}</td>
+        <td>${hoursContent.Weekend.hours[0]}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>${hoursContent.Weekend.hours[1]}</td>
     </tr>`;
     const hours = document.createElement("div");
+    hours.classList.add("hours");
     hours.append(hoursHeader, hoursTable);
 
     const contact = document.createElement("div");

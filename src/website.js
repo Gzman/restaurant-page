@@ -1,3 +1,4 @@
+import WebsiteContent from "../data/website.json"
 import { createHome } from "./home"
 import { createMenu } from "./menu"
 import { createContact } from "./contact"
@@ -6,7 +7,8 @@ const main = document.createElement("main");
 
 function createLogo() {
     const logo = document.createElement("h1");
-    logo.textContent = "Muster Restaurant";
+    logo.classList.add("logo");
+    logo.textContent = WebsiteContent.de.Logo;
     return logo;
 }
 
@@ -34,19 +36,20 @@ function createNavbar() {
     }
 
     const homeBtn = document.createElement("button");
-    homeBtn.textContent = "Home";
+    homeBtn.textContent = WebsiteContent.de.Home;
     homeBtn.addEventListener("click", (e) => changePage(e, createHome));
+    setButtonActive(homeBtn);
 
     const menuBtn = document.createElement("button");
-    menuBtn.textContent = "Menü";
+    menuBtn.textContent = WebsiteContent.de.Menu;
     menuBtn.addEventListener("click", (e) => changePage(e, createMenu));
 
     const contactBtn = document.createElement("button");
-    contactBtn.textContent = "Kontakt";
+    contactBtn.textContent = WebsiteContent.de.Contact;
     contactBtn.addEventListener("click", (e) => changePage(e, createContact));
 
     const navbar = document.createElement("nav");
-    navbar.id = "navbar";
+    navbar.classList.add("navbar");
     navbar.append(homeBtn, menuBtn, contactBtn);
     return navbar;
 };
@@ -66,8 +69,9 @@ function createMain() {
 
 function createFooter() {
     const link = document.createElement("a");
-    link.textContent = "Crafted by Gzman";
-    link.href = "https://www.github.com/Gzman";
+    link.textContent = WebsiteContent.de.footer.linkText;
+    link.href = WebsiteContent.de.footer.link;
+
     const footer = document.createElement("div");
     footer.classList.add("footer");
     footer.append(link);
